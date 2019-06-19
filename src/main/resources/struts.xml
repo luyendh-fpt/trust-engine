@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <constant name="struts.action.extension" value="lol"/>
+
+    <package name="helloPackage" extends="struts-default">
+        <action name="login" class="not.action.HelloWorldAction" method="doLogin">
+            <result name="success">/login.jsp</result>
+            <result name="error">/error.jsp</result>
+        </action>
+        <action name="processLogin" class="not.action.HelloWorldAction" method="processLogin">
+            <result name="success">/index.jsp</result>
+            <result name="input">/login.jsp</result>
+            <result name="error">/error.jsp</result>
+        </action>
+    </package>
+</struts>
